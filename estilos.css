@@ -2,8 +2,90 @@
 
 html {
 	background-color: #f2fafc;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.explorador-de-artigos {
-background-color: #eaeafc;
+
+ul {
+	
 }
+
+
+#pagina-inicial{
+	background-color: #eeedf3;
+	position: absolute;
+	right: 10%;
+	min-width: 60%;
+	max-width: 75%;
+	height: 100%;
+	margin-top: 10px;
+	margin-left: 20px;
+
+	padding-left: 5%;
+	padding-right: 1%;
+	padding-top: 1%;
+}
+
+
+.lista-de-artigos{
+	background-color: #eeedf3;
+	position: absolute;
+	right: 10%;
+	min-width: 60%;
+	max-width: 75%;
+	height: 100%;
+	margin-top: 10px;
+	margin-left: 20px;
+
+	padding-left: 5%;
+	padding-right: 1%;
+	padding-top: 1%;
+}
+
+.lista-de-artigos > ul{
+	margin-top: 100px;
+	padding-left: 20px;
+	
+}
+
+
+.explorador-de-artigos {
+	background-color: #1a6efc;
+	position: absolute;
+	left: 5%;
+	min-width: 15%;
+	max-width: 30%;
+	height: 100%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 1%;
+	color:whitesmoke;
+
+}
+
+
+.artigo{
+	background-color: #eeedf3;
+	position: absolute;
+	right: 10%;
+	min-width: 60%;
+	max-width: 75%;
+	height: 100%;
+	margin-top: 10px;
+	margin-left: 20px;
+
+	padding-left: 5%;
+	padding-right: 1%;
+	padding-top: 1%;
+}
+#titulo-do-artigo{
+	margin-left: 50px;
+	
+}
+
+
+.topico-de-fisica {
+
+}
+
+
