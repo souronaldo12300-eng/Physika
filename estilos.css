@@ -7,13 +7,27 @@ html {
 
 
 ul {
-	
+	list-style-type: none;
 }
+
+
+
+
+
+#conteudo-pagina{
+	height:;
+	display: flex;
+	grid-template-columns: 2;
+	grid-template-rows: 2;
+	
+
+}
+
 
 
 #pagina-inicial{
 	background-color: #eeedf3;
-	position: absolute;
+	
 	right: 10%;
 	min-width: 60%;
 	max-width: 75%;
@@ -24,15 +38,18 @@ ul {
 	padding-left: 5%;
 	padding-right: 1%;
 	padding-top: 1%;
+
+	grid-column-start: 2;
+
 }
 
-
+/* list de artigos é usado quando abre um tópico em especifico clicando no nome*/
 .lista-de-artigos{
 	background-color: #eeedf3;
-	position: absolute;
+	
 	right: 10%;
-	min-width: 60%;
-	max-width: 75%;
+
+	
 	height: 100%;
 	margin-top: 10px;
 	margin-left: 20px;
@@ -45,31 +62,34 @@ ul {
 .lista-de-artigos > ul{
 	margin-top: 100px;
 	padding-left: 20px;
-	
+
 }
 
 
 .explorador-de-artigos {
 	background-color: #1a6efc;
-	position: absolute;
 	left: 5%;
 	min-width: 15%;
 	max-width: 30%;
-	height: 100%;
+	height: auto;
 	padding-left: 1%;
 	padding-right: 1%;
 	padding-top: 1%;
 	color:whitesmoke;
+	grid-column-start: 0;
+}
 
+.explorador-de-artigos a{
+	color: whitesmoke;
+	text-decoration: none;
 }
 
 
 .artigo{
 	background-color: #eeedf3;
-	position: absolute;
+	
 	right: 10%;
-	min-width: 60%;
-	max-width: 75%;
+
 	height: 100%;
 	margin-top: 10px;
 	margin-left: 20px;
