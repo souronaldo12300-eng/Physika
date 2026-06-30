@@ -1,39 +1,28 @@
-
-
 html {
 	background-color: #f2fafc;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
 	display: flex;
-	grid-template-columns:  auto auto;
+	grid-template-columns: auto auto;
 	grid-template-rows: 100%;
 	min-height: 100vh;
-	
+
 }
 
 ul {
 	list-style-type: none;
 }
 
-
-
-.conteudo-pagina{
-
-
-}
-
-
-#artigo, #lista-de-artigos, #pagina-inicial{
+#artigo,
+#lista-de-artigos,
+#pagina-inicial {
 	background-color: #eeedf3;
-	
 	right: 10%;
-
 	height: 100%;
 	margin-top: 10px;
 	margin-left: 20px;
-
 	padding-left: 5%;
 	padding-right: 1%;
 	padding-top: 1%;
@@ -42,7 +31,7 @@ ul {
 
 
 
-.lista-de-artigos > ul{
+.lista-de-artigos>ul {
 	margin-top: 100px;
 	padding-left: 20px;
 
@@ -57,29 +46,40 @@ ul {
 	height: auto;
 	margin-left: 45px;
 	margin-right: 45px;
-
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 1%;
-	color:whitesmoke;
+	color: whitesmoke;
 	grid-column-start: 0;
 }
 
-.explorador-de-artigos a{
+#explorador-de-artigos a {
+	display: block;
+	margin-bottom: 20px;
 	color: whitesmoke;
-	text-decoration: none;
+}
+
+.artigo p {
+	margin: 0 0 0 20px;
+	font-size: 18px;
+}
+
+#pagina-inicial h1 {
+	background-color: yellow;
+	font-size: 45px;
+}
+
+#pagina-inicial h1 {
+	background-color: yellow;
+	text-align: center;
+}
+
+#conteudo-principal h2 {
+	background-color: rgb(215, 250, 218);
+	text-align: center;
 }
 
 
-
-#titulo-do-artigo{
+#titulo-do-artigo {
 	margin-left: 50px;
-	
 }
-
-
-.topico-de-fisica {
-
-}
-
-
