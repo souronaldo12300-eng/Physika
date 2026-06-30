@@ -86,11 +86,20 @@ body {
 
 h2, h3 {
     font-family: 'Montserrat', sans-serif;
-    color: #0b57d0; /* Mantendo o azul padrão do seu projeto */
+    color: #0b57d0; 
 }
 
-h2 { font-size: 32px; font-weight: 700; margin-bottom: 20px; }
-h3 { font-size: 24px; font-weight: 600; margin-bottom: 15px; }
+h2 {
+	font-size: 32px; 
+	font-weight: 700; 
+	margin-bottom: 20px; 
+}
+
+h3 { 
+	font-size: 24px; 
+	font-weight: 600; 
+	margin-bottom: 15px; 
+}
 
 p {
     font-family: 'Inter', sans-serif;
