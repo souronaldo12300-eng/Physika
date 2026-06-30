@@ -11,8 +11,8 @@ body {
 
 }
 
-ul {
-	list-style-type: none;
+#logo {
+	font-family: 'Montserrat', sans-serif;
 }
 
 #artigo,
@@ -70,16 +70,32 @@ ul {
 }
 
 #pagina-inicial h1 {
-	background-color: yellow;
+	background-color: rgb(83, 80, 255);
 	text-align: center;
 }
 
 #conteudo-principal h2 {
-	background-color: rgb(215, 250, 218);
+	background-color: rgb(215, 248, 250);
 	text-align: center;
 }
 
 
 #titulo-do-artigo {
 	margin-left: 50px;
+}
+
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #0b57d0; /* Mantendo o azul padrão do seu projeto */
+}
+
+h2 { font-size: 32px; font-weight: 700; margin-bottom: 20px; }
+h3 { font-size: 24px; font-weight: 600; margin-bottom: 15px; }
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #333333;
 }
