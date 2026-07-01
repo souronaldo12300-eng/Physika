@@ -7,6 +7,14 @@ const high1_tag="((H1))"
 const high2_tag="((H2))"
 const image_tag="((IMAGE))"
 
+
+let h1t
+let h2t
+let notet
+let warnt
+
+
+
 function decodeGDMRDOCS(text){
     let formatedtext={};
     
@@ -18,12 +26,12 @@ function decodeGDMRDOCS(text){
     let WarningTagPos=[];
     let Islice=0;
     while (true){
-        var high1tago=textbuffer.indexOf(high1_tag);
-        if (high1tago===-1){
+        const high1tago=textbuffer.indexOf(high1_tag);
+        if (high1tago==-1){
             break;
         }
         else{
-            H1TagPos.push(high1tago+high1_tag.length-1);
+            H1TagPos.push( [high1tago+high1_tag.length-1]);
             Islice=high1tago+high1_tag.length-1;
         }
     }
@@ -39,18 +47,19 @@ function decodeGDMRDOCS(text){
             Islice=high2tago+high2_tag.length-1;
         }
     }
+
     Islice=0;
     while (true){
         const notetagori=textbuffer.slice(Islice,textbuffer.length).indexOf(note_s_tag);
-        if (note2tagori==-1){
+        if (notetagori==-1){
             break;
             
         }
         else{
            const notetagend=textbuffer.slice(Islice,textbuffer.length).indexOf(note_e_tag)
-           const note2tagori=textbuffer.slice(note2tagori+note_s_tag.length-1,textbuffer.length).indexOf(note_s_tag);
+           const note2tagori=textbuffer.slice(notetagori+note_s_tag.length-1,textbuffer.length).indexOf(note_s_tag);
            
-           if (note2tagori != -1){
+           if (notetagori != -1){
                
                NoteTagPos.push(
                    [Math.min(notetagori,note2tagori),
@@ -60,6 +69,42 @@ function decodeGDMRDOCS(text){
            }
            else {
                
+            NoteTagPos.push(
+                   [notetagori,
+                   notetagend]
+                   );
+            Islice= notetagend+note_e_tag.length-1;
+               
+           }
+        }
+        
+    }
+    
+    Islice=0;
+    while (true){
+        const warntagori=textbuffer.slice(Islice,textbuffer.length).indexOf(note_s_tag);
+        if (warntagori==-1){
+            break;
+            
+        }
+        else{
+           const warntagend=textbuffer.slice(Islice,textbuffer.length).indexOf(warning_e_tag)
+           const warn2tagori=textbuffer.slice(warntagori+note_s_tag.length-1,textbuffer.length).indexOf(warning_s_tag);
+           
+           if (warn2tagori != -1){
+               
+               NoteTagPos.push(
+                   [Math.min(warntagori,warn2tagori),
+                   warntagend]
+                   );
+                Islice= warntagend+warning_e_tag.length-1;
+           }
+           else {
+               NoteTagPos.push(
+                   [warntagori,
+                   warntagend]
+                   );
+                Islice= warntagend+warning_e_tag.length-1;
                
            }
         }
@@ -67,11 +112,23 @@ function decodeGDMRDOCS(text){
     }
     
     
-    
-    
-    textbuffer=text
-}
+    console.log("H1: ",H1TagPos);
+    console.log("H2: ",H2TagPos);
+    console.log("Note: ",NoteTagPos);
+    console.log("Warning: ",WarningTagPos);
 
+    h1t=H1TagPos;
+    h2t=H2TagPos;
+    notet=NoteTagPos;
+    warnt=WarningTagPos;
+
+
+    while (true){
+        break;
+    }
+    
+    
+}
 
 
 function addWarningBlock(){}
@@ -98,4 +155,8 @@ async function loadServerFile(url) {
 }
 
 // Usage:
-loadServerFile('/path/to/your/file.txt');
+//loadServerFile('/path/to/your/file.txt');
+
+
+
+decodeGDMRDOCS("((H1))abc\n((H2))abc\n((NOTE))\nabcdefghijkabcdefghijk\nabcdefghijkabcdefghijk\n((.NOTE))");
